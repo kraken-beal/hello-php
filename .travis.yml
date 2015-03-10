@@ -7,17 +7,17 @@ php:
 #  - hhvm
 
 before_script:
-  - curl -s http://getcomposer.org/installer | php
-  - php composer.phar install --dev --prefer-source
+#  - curl -s http://getcomposer.org/installer | php
+#  - php composer.phar install --dev --prefer-source
 
 script:
-  - mkdir -p build/logs
+#  - mkdir -p build/logs
 #  - phpunit --coverage-clover build/logs/clover.xml --configuration tests/phpunit.xml tests
   - cd tests
   - phpunit
 
 after_script:
-  - php vendor/bin/coveralls -v
+#  - php vendor/bin/coveralls -v
 
 notifications:
 #  slack:
